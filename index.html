@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="calculator">
+        <div class="header">
+            <div class="window">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <input type="text" id="result" class="input, header" style="font-size: 20px; text-align: right;height: 70px;color: #ffffff; width: 342px; border: none; ">
+        </div>
+        <div class=" keys ">
+            <div class="row ">
+                <div class="number ">
+                    <input type="button" value="7" onclick="display('7'), sev()" class="num">
+                    <input type="button" value="8" onclick="display('8'), eig()" class="num">
+                    <input type="button" value="9" onclick="display('9'), nin()" class="num">
+                </div>
+                <div class="symbol ">
+                    <input type="button" value="÷" onclick="display('÷') , div()" style="background: white; border: none;font-size: 20px;">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="number ">
+                    <!--number four-->
+                    <input type="button" value="4" onclick="display('4'), four()" class="num">
+                    <audio id="audio4" src="./4.mp3"></audio>
+                    <!--number fourends -->
+                    <input type="button" value="5" onclick="display('5'), five()" class="num">
+                    <input type="button" value="6" onclick="display('6'), six()" class="num">
+                </div>
+                <div class="symbol ">
+                    <input type="button" value="-" onclick="display('-'), multi()" style="background: white; border: none;font-size: 20px;">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="number ">
+                    <input type="button" value="1" onclick="display('1'), one()" class="num">
+                    <input type="button" value="2" onclick="display('2'), two()" class="num">
+                    <input type="button" value="3" onclick="display('3'), three()" class="num">
+                </div>
+                <div class="symbol ">
+                    <input type="button" value="+" onclick="display('+'), plus()" style="background: white; border: none;font-size: 20px;">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="number ">
+                    <input type="button" value="AC" onclick="clearScreen(), ac()" style="color: #4a4a4a;" id="btn">
+                    <input type="button" value="0" onclick="display('0'), zero()">
+                    <input type="button" value="*" onclick="display('*'), mul()" style="color: #4a4a4a;">
+                </div>
+                <div class="symbol action ">
+                    <input type="button" value="=" onclick="calculate(), equal()" id="btn" style=" border: none;font-size: 20px;background: linear-gradient(60deg, #ff0300, #ffa100); border-radius: 0 0 10px 0;color: #ffffff; box-shadow: 0 25px 60px -10px rgba(255, 10, 0, 0.5);">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        function four() {
+            var audio = document.getElementById("audio4");
+            audio.play();
+        }
+    </script>
+    <p class="credit ">
+        <!--Design inspired by <a href="https://dribbble.com/shots/3998247-Calculator " target="_blank ">Dennis</a>--><br>Developed by
+        <a href="https://github.com/Oladipopreserve-19" target="_blank ">Oladipo Preserve</a><img src="./audio.png" onclick="play()" style="width: 30px; height: 30px;">
+    </p>
+    <!-- partial -->
+
+
+
+    <script>
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+
+        function ac() {
+            var audio = document.getElementById("audioac");
+            audio.play();
+        }
+
+        function sev() {
+            var audio = document.getElementById("audio7");
+            audio.play();
+        }
+
+        function nin() {
+            var audio = document.getElementById("audio9");
+            audio.play();
+        }
+
+        function eig() {
+            var audio = document.getElementById("audio8");
+            audio.play();
+        }
+
+        function five() {
+            var audio = document.getElementById("audio5");
+            audio.play();
+        }
+
+        function six() {
+            var audio = document.getElementById("audio6");
+            audio.play();
+        }
+
+        function three() {
+            var audio = document.getElementById("audio3");
+            audio.play();
+        }
+
+        function two() {
+            var audio = document.getElementById("audio2");
+            audio.play();
+        }
+
+        function one() {
+            var audio = document.getElementById("audio1");
+            audio.play();
+        }
+
+        function zero() {
+            var audio = document.getElementById("audio0");
+            audio.play();
+        }
+
+        function equal() {
+            var audio = document.getElementById("audio0");
+            audio.play();
+        }
+
+
+
+
+
+        function min() {
+            var audio = document.getElementById("audiomin");
+            audio.play();
+        }
+
+        function mul() {
+            var audio = document.getElementById("audiomul");
+            audio.play();
+        }
+
+        function multi() {
+            var audio = document.getElementById("audiomin");
+            audio.play();
+        }
+
+        function plus() {
+            var audio = document.getElementById("audio+");
+            audio.play();
+        }
+
+        function div() {
+            var audio = document.getElementById("audiodiv");
+            audio.play();
+        }
+
+        function equal() {
+            var audio = document.getElementById("audioeq");
+            audio.play();
+        }
+
+        //answer script
+    </script>
+
+    <audio id="audio" src="made.mp3"></audio>
+    <audio id="audio1" src="1.mp3"></audio>
+    <audio id="audio2" src="2.mp3"></audio>
+    <audio id="audio3" src="3.mp3"></audio>
+    <audio id="audiomin" src="./min.mp3"></audio>
+    <audio id="audio5" src="5.mp3"></audio>
+    <audio id="audio6" src="6.mp3"></audio>
+    <audio id="audio7" src="7.mp3"></audio>
+    <audio id="audio8" src="8.mp3"></audio>
+    <audio id="audio9" src="9.mp3"></audio>
+    <audio id="audio10" src="10.mp3"></audio>
+    <audio id="audio0" src="zero.mp3"></audio>
+    <audio id="audiomul" src="./multi.mp3"></audio>
+    <audio id="audio+" src="./+.mp3"></audio>
+    <audio id="audiodiv" src="./divide.mp3"></audio>
+    <audio id="audioeq" src="./equals.mp3"></audio>
+    <audio id="audioac" src="./clear.mp3"></audio>
+</body>
+
+</html>
